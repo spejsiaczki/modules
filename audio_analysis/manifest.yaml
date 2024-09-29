@@ -1,13 +1,13 @@
-name: audio_analyzer # Name of the module
+name: audio_analysis # Name of the module
 description: Detection of stops and long repetitions of sound
 entrypoint: main.py # Entry point of the module, python script placed in the same folder
 
 # Accepted input files
 inputs:
-    - param_name: input
-      type: audio
+  - param_name: input
+    type: audio
 
 # Produced output files
 outputs:
-    - param_name: output
-      type: json
+  - param_name: output
+    type: json
