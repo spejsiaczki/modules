@@ -1,0 +1,9 @@
+name: text_summary
+description: text_summary
+entrypoint: summary.py
+inputs:
+  - param_name: original_text
+    type: text
+outputs:
+  - param_name: summary_text
+    type: text
