@@ -13,6 +13,7 @@ parser.add_argument('--input_emotions_detection', type=str)
 parser.add_argument('--input_gunning_fog', type=str)
 parser.add_argument('--input_language_detection', type=str)
 parser.add_argument('--input_audio_analysis', type=str)
+parser.add_argument('--input_head_movement', type=str)
 
 parser.add_argument('--output_merged', type=str)
 
@@ -72,6 +73,8 @@ def merge_data():
             })
     with open(args.input_audio_analysis, "r") as f:
         audio_analysis = json.load(f)
+    with open(args.input_head_movement, "r") as f:
+        head_movement = json.load(f)
 
     data = {
         "comparison": comparison,
@@ -84,6 +87,7 @@ def merge_data():
         "gunning_fog": gunning_fog,
         "language_detection": lang,
         "audio_analysis": audio_analysis,
+        "head_movement": head_movement,
     }
 
     print(data)

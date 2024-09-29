@@ -22,6 +22,8 @@ inputs:
     type: text
   - param_name: input_audio_analysis
     type: text
+  - param_name: input_head_movement
+    type: text
 outputs:
   - param_name: output_merged
     type: text
