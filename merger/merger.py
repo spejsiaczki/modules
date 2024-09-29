@@ -12,6 +12,7 @@ parser.add_argument('--input_background_person_detection', type=str)
 parser.add_argument('--input_emotions_detection', type=str)
 parser.add_argument('--input_gunning_fog', type=str)
 parser.add_argument('--input_language_detection', type=str)
+parser.add_argument('--input_audio_analysis', type=str)
 
 parser.add_argument('--output_merged', type=str)
 
@@ -69,6 +70,8 @@ def merge_data():
                 "word": w,
                 "polish": pl
             })
+    with open(args.input_audio_analysis, "r") as f:
+        audio_analysis = json.load(f)
 
     data = {
         "comparison": comparison,
@@ -79,7 +82,8 @@ def merge_data():
         "background_person_detection": background_person_detection,
         "emotions_detection": emotions_detection,
         "gunning_fog": gunning_fog,
-        "language_detection": lang
+        "language_detection": lang,
+        "audio_analysis": audio_analysis,
     }
 
     print(data)
