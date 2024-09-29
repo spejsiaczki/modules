@@ -1,0 +1,9 @@
+name: language_detection
+description: language_detection
+entrypoint: language_detection.py
+inputs:
+  - param_name: input_text
+    type: text
+outputs:
+  - param_name: output_language
+    type: text

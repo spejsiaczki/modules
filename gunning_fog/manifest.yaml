@@ -1,0 +1,9 @@
+name: gunning_fog
+description: gunning_fog
+entrypoint: gunning_fog.py
+inputs:
+  - param_name: input_text
+    type: text
+outputs:
+  - param_name: output
+    type: text

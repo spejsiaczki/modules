@@ -1,0 +1,13 @@
+name: speech_processing
+description: Speech processing module.
+entrypoint: speech_processing.py
+inputs:
+  - param_name: input_audio
+    type: audio
+outputs:
+  - param_name: output_text
+    type: text
+  - param_name: output_word_timestamps
+    type: text
+  - param_name: output_pause_timestamps
+    type: text

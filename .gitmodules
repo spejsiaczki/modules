@@ -1,0 +1,3 @@
+[submodule "video_trim"]
+	path = video_trim
+	url = https://github.com/spejsiaczki/video_trim.git

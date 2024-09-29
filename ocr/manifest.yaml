@@ -1,0 +1,9 @@
+name: ocr
+description: OCR
+entrypoint: ocr.py
+inputs:
+  - param_name: input
+    type: video
+outputs:
+  - param_name: output_ocr
+    type: text

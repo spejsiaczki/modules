@@ -1,0 +1,11 @@
+name: text_comparison
+description: text_comparison
+entrypoint: text_comparison.py
+inputs:
+  - param_name: input_ocr
+    type: text
+  - param_name: input_sr
+    type: text
+outputs:
+  - param_name: output
+    type: text
