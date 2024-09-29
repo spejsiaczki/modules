@@ -94,3 +94,6 @@ wcwidth==0.2.13
 opencv-contrib-python==4.10.0.84
 fer==22.5.1
 imageio-ffmpeg==0.5.1
+tensorflow
+mediapipe
+pyloudnorm
