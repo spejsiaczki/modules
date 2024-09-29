@@ -1,0 +1,13 @@
+name: emotions_detection    # Name of the module
+description: Emotion detection # User-friendly description of the module
+entrypoint: emotions_detection.py     # Entry point of the module, python script placed in the same folder
+
+# Accepted input files
+inputs:
+  - param_name: input 
+    type: video
+
+# Produced output files
+outputs:
+  - param_name: output
+    type: json

@@ -1,0 +1,13 @@
+name: background_person_detection    # Name of the module
+description: Detect person appearing in the background # User-friendly description of the module
+entrypoint: background_person_detection.py     # Entry point of the module, python script placed in the same folder
+
+# Accepted input files
+inputs:
+  - param_name: input 
+    type: video
+
+# Produced output files
+outputs:
+  - param_name: output
+    type: json
