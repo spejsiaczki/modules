@@ -1,0 +1,13 @@
+name: head_movement    # Name of the module
+description: Head movement detection # User-friendly description of the module
+entrypoint: head_movement.py     # Entry point of the module, python script placed in the same folder
+
+# Accepted input files
+inputs:
+  - param_name: input 
+    type: video
+
+# Produced output files
+outputs:
+  - param_name: output
+    type: json
