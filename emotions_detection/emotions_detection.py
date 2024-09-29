@@ -12,6 +12,12 @@ parser.add_argument('--input', type=str, help='input video file path')
 parser.add_argument('--output', type=str, help='output json file path')
 
 
+def map_emotions_dict(input_dict):
+    polish_names = ['stanowczość', 'zdegustowanie', 'strach', 'radość', 'smutek', 'zaskoczenie', 'neutralność']
+    final_dict = dict(zip(polish_names, list(input_dict.values())))
+    return final_dict
+
+
 def main(file_path: str, json_path: str):
     input_video = cv2.VideoCapture(file_path)
     frame_rate = input_video.get(cv2.CAP_PROP_FPS)
@@ -61,9 +67,9 @@ def main(file_path: str, json_path: str):
         mimika_timestamp = None
     else:
         mimika_timestamp = timestamp
-
+    
     data = {'mimika_timestamp': mimika_timestamp,
-            'emotions': max_emotions_dict}
+            'emotions': map_emotions_dict(max_emotions_dict)}
     with open(json_path, 'w') as file:
         json.dump(data, file)
 
