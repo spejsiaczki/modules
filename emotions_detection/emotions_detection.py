@@ -13,9 +13,14 @@ parser.add_argument('--output', type=str, help='output json file path')
 
 
 def map_emotions_dict(input_dict):
-    polish_names = ['stanowczość', 'zdegustowanie', 'strach', 'radość', 'smutek', 'zaskoczenie', 'neutralność']
-    final_dict = dict(zip(polish_names, list(input_dict.values())))
-    return final_dict
+    translations = {'angry':'stanowczość', 'disgust':'zdegustowanie','fear': 'strach', 'happy': 'radość', 'sad':'smutek','surprise': 'zaskoczenie', 'neutral':'neutralność' }
+    translated_emotions = {}
+    for key, value in input_dict.items():
+        if value in translations:
+            translated_emotions[key] = translations[value]
+        else:
+            translated_emotions[key] = value
+    return translated_emotions
 
 
 def main(file_path: str, json_path: str):

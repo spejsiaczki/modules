@@ -1,0 +1,25 @@
+name: merger
+description: merger
+entrypoint: merger.py
+inputs:
+  - param_name: input_comparison
+    type: text
+  - param_name: input_sp
+    type: text
+  - param_name: input_ocr
+    type: text
+  - param_name: input_word_timestamps
+    type: text
+  - param_name: input_pause_timestamps
+    type: text
+  - param_name: input_background_person_detection
+    type: text
+  - param_name: input_emotions_detection
+    type: text
+  - param_name: input_gunning_fog
+    type: text
+  - param_name: input_language_detection
+    type: text
+outputs:
+  - param_name: output_merged
+    type: text
